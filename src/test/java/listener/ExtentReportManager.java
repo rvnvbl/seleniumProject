@@ -9,6 +9,9 @@ import org.testng.ITestContext;
 import org.testng.ITestListener;
 import org.testng.ITestResult;
 
+import java.text.SimpleDateFormat;
+import java.util.Date;
+
 public class ExtentReportManager implements ITestListener {
 
     public ExtentSparkReporter sparkReporter;
@@ -19,8 +22,11 @@ public class ExtentReportManager implements ITestListener {
     @Override
     public void onStart(ITestContext context) {
         ITestListener.super.onStart(context);
-        System.out.println("On Start");
-        sparkReporter = new ExtentSparkReporter("src/test/resources/reports/myReport.html");
+
+        // Get current date and time in the desired format
+        String timestamp = new SimpleDateFormat("yyyy-MM-dd_HH-mm-ss").format(new Date());
+        String reportPath = "src/test/resources/reports/myReport_" + timestamp + ".html";
+        sparkReporter = new ExtentSparkReporter(reportPath);
         sparkReporter.config().setDocumentTitle("Automation Report");
         sparkReporter.config().setReportName("Smoke Testing");
         sparkReporter.config().setTheme(Theme.DARK);
