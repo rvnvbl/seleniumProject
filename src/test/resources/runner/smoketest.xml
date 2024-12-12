@@ -1,15 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <suite name="Suite1">
+    <listeners>
+        <listener class-name = "listener.ExtentReportManager"/>
+    </listeners>
     <!-- Define the parallel execution mode -->
     <parallel mode="tests" thread-count="2">
 
         <!-- Define the test to be executed -->
-        <test name="Test in Edge">
+        <test name="Test in Edge" >
 
             <classes>
                 <!-- Add the test class to be run -->
-                <class name="org.example.LoginPageTest"/>
+                <class name="org.example.testScripts.LoginPageTest"/>
             </classes>
+
         </test>
 
     </parallel>
