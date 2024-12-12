@@ -1,11 +1,10 @@
-package org.example;
+package org.example.testScripts;
 
 import org.example.config.ConfigReader;
 import org.example.config.DriverManager;
 import org.openqa.selenium.WebDriver;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
-import org.testng.annotations.Parameters;
 
 import java.time.Duration;
 

@@ -1,4 +1,4 @@
-package org.example;
+package org.example.testScripts;
 
 import org.example.pages.LoginPage;
 import org.example.pages.ProductPage;
