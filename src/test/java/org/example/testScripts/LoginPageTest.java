@@ -4,6 +4,7 @@ import org.example.pages.LoginPage;
 import org.example.pages.ProductPage;
 import org.testng.Assert;
 import org.testng.annotations.BeforeClass;
+import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
 public class LoginPageTest extends BaseTest{
@@ -35,6 +36,7 @@ public class LoginPageTest extends BaseTest{
         loginPage.clickLoginButton();
 
         ProductPage productPage = new ProductPage(driver);
+        System.out.println(productPage.getPageTitle());
         Assert.assertTrue(productPage.getPageTitle().contains("Products"));
     }
 }
