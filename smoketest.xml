@@ -12,6 +12,7 @@
             <classes>
                 <!-- Add the test class to be run -->
                 <class name="org.example.testScripts.LoginPageTest"/>
+                <class name="org.example.testScripts.ProductPageTest"/>
             </classes>
 
         </test>
